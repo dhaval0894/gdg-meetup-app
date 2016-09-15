@@ -3,27 +3,27 @@
 		Upcoming Events
 	</div>
 	<div class="panel-body">
-    
+    {{#each model as |event|}}
       <div class="col-md-4">
         <div class="panel panel-primary">
           <div class="panel-heading">
-            
+            {{event.name}}
           </div>
           <div class="panel-body">
             <p class="lead">
-               <br/>
+               {{event.description}} <br/>
               <small>
-                
+               {{event.technology}}
               </small>
             </p>      
             <p>
               <small class="text-info">
-                
+                {{event.venue}} - {{event.event_date}}  
               </small>
             </p>
           </div>  
         </div>
       </div>
-    
+    {{/each}}
 	</div>
 </div>
