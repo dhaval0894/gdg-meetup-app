@@ -18,7 +18,12 @@
             </p>      
             <p>
               <small class="text-info">
-                {{event.venue}} - {{event.event_date}}  
+                {{event.venue}} - 
+                {{#if event.eventDate}}
+                  {{moment-format event.eventDate 'DD-MM-YYYY'}}  
+                {{else}}
+                  N/A
+                {{/if}}  
               </small>
             </p>
           </div>  
