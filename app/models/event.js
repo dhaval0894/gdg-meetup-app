@@ -6,5 +6,6 @@ export default DS.Model.extend({
   technology: DS.attr('string'),
   agenda: DS.attr('string'),
   venue: DS.attr('string'),
-  eventDate: DS.attr('date')
+  eventDate: DS.attr('date'),
+  participants: DS.hasMany('participant')
 });
