@@ -7,7 +7,7 @@
           </div>
           <div class="col-md-6 text-right">
           	{{#link-to 'events.edit' model class='btn btn-sm btn-primary'}}Edit{{/link-to}}  
-          	{{#link-to class='btn btn-sm btn-danger'}}Delete{{/link-to}}  
+            <button {{action 'destroyEvent' model}} class="btn btn-sm btn-danger">Delete</button>
           </div>
         </div>
       

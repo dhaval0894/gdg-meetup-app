@@ -10,8 +10,8 @@ export default Ember.Route.extend({
 	},
 
 	actions: {
-		updateEvent() {
-			this.get("model").save().then(() => this.transitionTo('events.show', this.get("model")));
+		updateEvent(event) {
+			event.save().then(() => this.transitionTo('events.show', event));
 		}
 	}
 });
