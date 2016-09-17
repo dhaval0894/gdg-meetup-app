@@ -3,27 +3,34 @@
 		Upcoming Events
 	</div>
 	<div class="panel-body">
-    
+    {{#each model as |event|}}
       <div class="col-md-4">
         <div class="panel panel-primary">
           <div class="panel-heading">
-            
+            {{event.name}}
           </div>
           <div class="panel-body">
             <p class="lead">
-               <br/>
+               {{event.description}} <br/>
               <small>
-                
+               {{event.technology}}
               </small>
             </p>      
             <p>
               <small class="text-info">
-                
+                {{event.venue}} - 
+                {{#if event.eventDate}}
+                  {{moment-format event.eventDate 'DD-MM-YYYY'}}  
+                {{else}}
+                  N/A
+                {{/if}}  
               </small>
             </p>
+            {{#link-to class='btn btn-sm btn-primary'}}Register Here{{/link-to}}
+            {{#link-to 'events.show' event class='btn btn-sm btn-success'}}View Details{{/link-to}}
           </div>  
         </div>
       </div>
-    
+    {{/each}}
 	</div>
 </div>

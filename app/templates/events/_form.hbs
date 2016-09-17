@@ -1,0 +1,67 @@
+<form class="form-horizontal">
+  <fieldset>
+    <div class="form-group">
+      <div class="col-md-2">
+        <label for="Event Name" class="label-control">Event Name</label>
+      </div>
+      <div class="col-md-8">
+        {{input type="text" value=model.name class="form-control" placeholder="Enter Event Name"autofocus=true}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-2">
+        <label for="Event Description" class="label-control">Event Description</label>
+      </div>
+      <div class="col-md-8">
+        {{textarea value=model.description class="form-control" placeholder="Enter Event Description" rows="6"}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-2">
+        <label for="Event Technology" class="label-control">Technology</label>
+      </div>
+      <div class="col-md-8">
+        {{input type="text" value=model.technology class="form-control" placeholder="Enter Technology"}}
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="col-md-2">
+        <label for="Event Agenda" class="label-control">Agenda</label>
+      </div>
+      <div class="col-md-8">
+        {{textarea value=model.agenda class="form-control" placeholder="Enter Event Agenda" rows="6"}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-2">
+        <label for="Event Venue" class="label-control">Venue</label>
+      </div>
+      <div class="col-md-8">
+        {{input type="text" value=model.venue class="form-control" placeholder="Enter Venue"}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-2">
+        <label for="Event Date" class="label-control">Date</label>
+      </div>
+      <div class="col-md-8">
+        {{date-picker date=model.eventDate valueFormat="date" class="form-control" placeholder="Enter Date"}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-offset-4 col-md-6"> 
+        {{#if isEditing}}
+          <button type="submit" class="btn btn-primary" {{action 'updateEvent' model}}>Update Event</button>
+        {{else}}
+          <button type="submit" class="btn btn-primary" {{action 'saveEvent' model}}>Add Event</button>
+        {{/if}}  
+      </div>
+    </div>
+  </fieldset>  
+</form>  
