@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('events', function(){
       this.route('new');
       this.route('show', {path: '/:event_id'});
+      this.route('edit', {path: '/:event_id/edit'});
     });
 });
 

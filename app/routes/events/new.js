@@ -5,10 +5,10 @@ export default Ember.Route.extend({
 		return this.store.createRecord('event');
 	},
 
-	actions: {
+	actions: {		
 		saveEvent(newEvent) {
-			newEvent.save().then(() => this.transitionTo('index'));
-		},
+      newEvent.save().then(() => this.transitionTo('index'));
+    },               
 
 		willTransition() {
 			// rollbackAttributes() removes the record from the store
