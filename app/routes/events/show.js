@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 
 	actions: {
 		destroyEvent(event) {
-			event.destroyRecord().then(() => { this.transitionTo('index') });
+			event.destroyRecord().then(() => { this.transitionTo('index'); });
 		}
 	}
 });

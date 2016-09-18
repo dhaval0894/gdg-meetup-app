@@ -1,0 +1,49 @@
+<div class="panel panel-success">
+	<div class="panel-body">  
+    	<form class="form-horizontal">
+    	  <fieldset>
+    	    <div class="form-group">
+    	      <div class="col-md-2">
+    	        <label for="Name" class="label-control">Full Name</label>
+    	      </div>
+    	      <div class="col-md-8">
+    	        {{input type="text" value=model.name class="form-control" placeholder="Enter Full Name"autofocus=true}}
+    	      </div>
+    	    </div>
+
+    	    <div class="form-group">
+    	      <div class="col-md-2">
+    	        <label for="Email" class="label-control">Email</label>
+    	      </div>
+    	      <div class="col-md-8">
+    	        {{input type="text" value=model.email class="form-control" placeholder="Enter Email-ID"}}
+    	      </div>
+    	    </div>
+    	    
+    	    <div class="form-group">
+    	      <div class="col-md-2">
+    	        <label for="Contact Number" class="label-control">Contact Number</label>
+    	      </div>
+    	      <div class="col-md-8">
+    	        {{input type="text" value=model.contact class="form-control" placeholder="Enter Contact Number"}}
+    	      </div>
+    	    </div>
+
+    	    <div class="form-group">
+    	      <div class="col-md-2">
+    	        <label for="Suggestion" class="label-control">Suggestion/Query</label>
+    	      </div>
+    	      <div class="col-md-8">
+    	        {{textarea value=model.suggestion class="form-control" placeholder="Enter Suggestion/Query" rows="6"}}
+    	      </div>
+    	    </div>
+
+    	    <div class="form-group">
+    	      <div class="col-md-offset-4 col-md-6"> 
+  	          <button type="submit" class="btn btn-primary" {{action 'register' model}}>Submit</button>    	        
+    	      </div>
+    	    </div>
+    	  </fieldset>  
+    	</form>  
+	</div>
+</div>

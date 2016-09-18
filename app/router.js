@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('edit', {path: '/:event_id/edit'});
   });
 
+  this.route('register');
 });
 
 export default Router;
